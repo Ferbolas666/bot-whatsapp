@@ -1,0 +1,28 @@
+{
+  "name": "nodejs-scriptcase",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "git": "^0.1.5",
+    "gpt4all": "^4.0.0",
+    "node-firebird": "^1.1.9",
+    "one-liner-joke": "^1.2.2",
+    "openai": "^4.85.3",
+    "pkg": "^5.8.1",
+    "qrcode": "^1.5.4",
+    "qrcode-terminal": "^0.12.0",
+    "sharp": "^0.33.5",
+    "socket.io": "^4.8.1",
+    "whatsapp-web.js": "^1.26.0"
+  }
+}
