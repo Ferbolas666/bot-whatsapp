@@ -223,6 +223,7 @@ io.on("connection", (socket) => {
     });
 });
 
-server.listen(1050, '0.0.0.0', () => {
-    console.log("🌍 Servidor rodando em http://0.0.0.0:1050");
-});
+server.listen(13409, '0.0.0.0', () => {
+    console.log("🌍 Servidor rodando em http://0.0.0.0:13409");
+  });
+  
