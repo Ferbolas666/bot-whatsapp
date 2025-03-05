@@ -1,0 +1,11 @@
+[33mcommit 2b4f18dad44773059a872b27273f62e073112293[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Ferbolas666 <maatheuss.celestinoo@gmail.com>
+Date:   Wed Mar 5 08:31:19 2025 -0300
+
+    Removendo chave da OpenAI do histórico
+
+[33mcommit 2c48e853c60fe26a4c37ae7382c27f265955fb51[m
+Author: Ferbolas666 <maatheuss.celestinoo@gmail.com>
+Date:   Mon Mar 3 14:24:54 2025 -0300
+
+    Primeiro commit do bot

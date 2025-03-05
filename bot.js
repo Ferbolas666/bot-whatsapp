@@ -223,6 +223,7 @@ io.on("connection", (socket) => {
     });
 });
 
-server.listen(3000, () => {
-    console.log("🌍 Servidor rodando em http://localhost:3000");
+server.listen(3001, '0.0.0.0', () => {
+    console.log("🌍 Servidor rodando em http://0.0.0.0:3001");
 });
+
