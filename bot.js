@@ -30,9 +30,14 @@ io.on("connection", (socket) => {
             client = new Client();
 
             client.on("qr", (qr) => {
-                console.log("📲 Escaneie este QR Code para conectar!");
+                console.log("📲 QR Code gerado. Aguarde o escaneamento!");
                 qrcode.toDataURL(qr, (err, url) => {
+                    if (err) {
+                        console.error("Erro ao gerar QR Code:", err);
+                        return;
+                    }
                     io.emit("qr", url);
+                    console.log("QR Code enviado para o cliente.");
                 });
             });
 
@@ -218,13 +223,24 @@ io.on("connection", (socket) => {
                     });
                 }
             });
-            client.initialize();
+            client.on("ready", () => {
+                console.log("✅ Bot conectado!");
+                io.emit("status", "✅ Bot conectado!");
+            });
+
+            // Inicializando o cliente
+            console.log("🔄 Inicializando o cliente WhatsApp...");
+            client.initialize().then(() => {
+                console.log("📱 Cliente WhatsApp inicializado com sucesso!");
+            }).catch((error) => {
+                console.error("Erro ao inicializar o cliente WhatsApp:", error);
+            });
+        } else {
+            console.log("👀 O cliente já foi criado anteriormente. Ignorando a criação.");
         }
     });
 });
 
-server.listen(13409, 'localhost', () => {
-    console.log("🌍 Servidor rodando em http://localhost:13409");
-});
-
-  
+server.listen(13409, '0.0.0.0', () => {
+    console.log("🌍 Servidor rodando em http://200.150.199.19:13409/");
+}); 
